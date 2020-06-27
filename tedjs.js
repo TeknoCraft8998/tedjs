@@ -79,7 +79,6 @@ ted.map = {
         }
     }
 }
-// This is not working sorry
 ted.sumOf = function(...numbers) {
     let sum = 0;
     for(let i = 0; i< numbers.length; i++) {
