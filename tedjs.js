@@ -1,4 +1,4 @@
-function ted(i="") {
+ted = (i="") => {
     switch (i) {
         case "owner.name":
             console.log("Xevaltan")
@@ -48,15 +48,15 @@ ted.array = {
     make: new Array
 }
 ted.gen = {
-    num: function() {
+    num: () => {
         return Math.floor(Math.random() * 9)
     },
     letter: {
-        upperCase: function(get=0) {
+        upperCase: (get=0) => {
             var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P","Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
             return letters[get]
         },
-        lowerCase: function(get=0) {
+        lowerCase: (get=0) => {
             var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u","v","w", "x", "y", "z"]
             return letters[get]
         }
@@ -65,21 +65,21 @@ ted.gen = {
 ted.alert = (message) => console.log(message);
 
 ted.map = {
-    a: function(startNum=0, endNum=20, count=1) {
+    a: (startNum=0, endNum=20, count=1) => {
         while(startNum <= endNum) {
             ted.clg(startNum);
             startNum=startNum+count
         }
 
     },
-    b: function(startNum=20, endNum=0, count=1) {
+    b: (startNum=20, endNum=0, count=1) => {
         while(startNum >= endNum) {
             ted.clg(startNum);
             startNum=startNum-count
         }
     }
 }
-ted.sumOf = function(...numbers) {
+ted.sumOf = (...numbers) => {
     let sum = 0;
     for(let i = 0; i< numbers.length; i++) {
         sum += numbers[i]
